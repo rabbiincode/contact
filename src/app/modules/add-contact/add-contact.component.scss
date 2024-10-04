@@ -1,0 +1,62 @@
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 3rem;
+  .header{
+    color: rgb(142, 142, 247);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+  }
+  form{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 0.0625rem solid #aaa8a8;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    & label{
+      margin-bottom: 0.25rem;
+    }
+    & input{
+      border: 0.0625rem solid #aaa8a8;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .address{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      border: 0.0625rem solid #aaa8a8;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+      & input{
+        width: 100%;
+        border: none;
+        border-radius: 0.5rem 0 0 0.5rem;
+        margin-bottom: 0;
+      }
+      & button{
+        background: #aaa8a8;
+        border: none;
+        border-radius: 0 0.5rem 0.5rem 0;
+        padding: 1rem;
+      }
+    }
+    .add{
+      border: 0.0625rem solid #aaa8a8;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+    & button{
+      background: #aaa8a8;
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<div class="contact">
+  <p class="header">Add Contact</p>
+  <form [formGroup]="contactForm" (ngSubmit)="submitContact()">
+    <label>Name:</label>
+    <input formControlName="name" type="text" required />
+
+    <label>Phone Number:</label>
+    <input formControlName="phoneNumber" type="text" required />
+
+    <label>Email:</label>
+    <input formControlName="email" type="email" required />
+
+    <label>Addresses:</label>
+    <div formArrayName="addresses">
+      @for (address of addresses.controls; track address; let i = $index) {
+        <div class="address">
+          <input [formControlName]="i" type="text" required />
+          <button type="button" (click)="removeAddress(i)">Remove</button>
+        </div>
+      }
+      <button type="button" (click)="addAddress()" [disabled]="addresses.length >= 5" class="add">
+        Add Address
+      </button>
+    </div>
+
+    <label>Longitude:</label>
+    <input formControlName="longitude" type="text"/>
+
+    <label>Latitude:</label>
+    <input formControlName="latitude" type="text" />
+
+    <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+  </form>
+</div>
